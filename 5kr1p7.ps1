@@ -2,7 +2,7 @@ param([string]$Kommentar, [int]$Sleep=1337, [int]$RestoreClipboard=1337)
 
 #############################
 # Default Restore Clipboard #
-$restore = $false           #
+$restore = $true            #
 #                           #
 #    Default Sleep Time     #
 $defsleep="3"               #
