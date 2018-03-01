@@ -2,7 +2,7 @@ param([string]$Kommentar, [int]$Sleep=1337, [int]$RestoreClipboard=1337)
 
 #############################
 # Default Restore Clipboard #
-$restore = $true            #
+$restore = $false           #
 #                           #
 #    Default Sleep Time     #
 $defsleep="3"               #
@@ -19,14 +19,14 @@ if($Kommentar -ne "")
 {
 	$kommi = ", $Kommentar"
 }
-if($Sleep -ne 1337 -and $Sleep -ne 1)
-{
-	$sleeptime = $Sleep
-}
-elseif($Kommentar -match "^\d+$")
+if($Kommentar -match "^\d+$")
 {
 	$sleeptime = $Kommentar
 	$kommi = ""
+}
+elseif($Sleep -ne 1337 -and $Sleep -ne 1)
+{
+	$sleeptime = $Sleep
 }
 if ($Kommentar -eq 0 -or $Kommentar -eq 1)
 {
