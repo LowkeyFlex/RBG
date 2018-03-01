@@ -18,8 +18,10 @@ elseif($Kommentar -match "^\d+$")
 }
 $output = "Maximilian, $date$kommi"
 Write-Output $output | Set-Clipboard
+Write-Host 
 Get-Clipboard
-Write-Host "sleep $sleeptime seconds"
+Write-Host 
+Write-Host "+++ sleep $sleeptime seconds +++"
 Start-Sleep -s $sleeptime
 Write-Output $clip | Set-Clipboard
-Write-Host sleepover
+Write-Host "+++ sleepover +++"
