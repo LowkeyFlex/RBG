@@ -1,8 +1,14 @@
 param([string]$Kommentar, [int]$Sleep)
+
+# Default Sleep Time #
+$sleeptime="3"
+
+# Default Name #
+$name = "Maximilian"
+
 $clip = Get-Clipboard
 $date = Get-Date -UFormat "%H:%M, %d.%m.%Y"
 $kommi=""
-$sleeptime="3"
 if($Kommentar -ne "")
 {
 	$kommi=", $Kommentar"
@@ -16,7 +22,7 @@ elseif($Kommentar -match "^\d+$")
 	$sleeptime=$Kommentar
 	$kommi=""
 }
-$output = "Maximilian, $date$kommi"
+$output = "$name, $date$kommi"
 Write-Output $output | Set-Clipboard
 Write-Host 
 Get-Clipboard
