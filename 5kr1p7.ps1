@@ -24,7 +24,7 @@ if($Kommentar -match "^\d+$")
 	$sleeptime = $Kommentar
 	$kommi = ""
 }
-elseif($Sleep -ne 1337 -and $Sleep -ne 1)
+elseif($Sleep -ne 1337 -and $Sleep -ne 0 -and $Sleep -ne 1)
 {
 	$sleeptime = $Sleep
 }
